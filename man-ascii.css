@@ -58,6 +58,13 @@ td {
     color: #3ca06b;
     font-size: xx-small;
 }
+.ascii .ctrl {
+    position: absolute;
+    right: 0.25em;
+    top: 0.25em;
+    color: #3c8ca0;
+    font-size: xx-small;
+}
 .dec, .hex, .oct {
     position: absolute;
     right: 0.25em;
@@ -65,6 +72,6 @@ td {
     color: #bb88bb;
     font-size: xx-small;
 }
-.hex, .oct {
+.hex, .oct, .ctrl {
     display: none;
 }
