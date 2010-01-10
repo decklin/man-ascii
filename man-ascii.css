@@ -50,6 +50,9 @@ h1, p {
     padding: 0;
     margin: 0;
 }
+.ascii acronym {
+    border-bottom: 1px dotted #c2c9d1 !important;
+}
 .ascii .named, .ascii .ctrl {
     padding: 1em 0.4em;
 }
