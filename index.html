@@ -1143,24 +1143,30 @@
   <div class="options">
     <p class="left">
       Show numbers in:
-      <input type="radio" name="base" value="dec" checked="true"
-             onchange="switchBase(this.value)" /> Decimal
-      <input type="radio" name="base" value="hex"
-             onchange="switchBase(this.value)" /> Hex
-      <input type="radio" name="base" value="oct"
-             onchange="switchBase(this.value)" /> Octal
+      <input type="radio" name="base" id="decRadio" value="dec"
+             onchange="switchBase(this.value)" checked="true" />
+      <label for="decRadio">Decimal</label>
+      <input type="radio" name="base" id="hexRadio" value="hex"
+             onchange="switchBase(this.value)" />
+      <label for="hexRadio">Hex</label>
+      <input type="radio" name="base" id="octRadio" value="oct"
+             onchange="switchBase(this.value)" />
+      <label for="octRadio">Octal</label>
     </p>
     <p class="right">
-      <input type="checkbox" checked="true"
-             onchange="toggleEsc(this.checked)" /> Show C escapes
+      <input type="checkbox" id="escBox" checked="true"
+             onchange="toggleEsc(this.checked)" />
+      <label for="escBox">Show C escapes</label>
     </p>
     <br style="clear: both">
     <p class="left">
       Show control characters as:
-      <input type="radio" name="ctrl" value="named" checked="true"
-             onchange="switchCtrl(this.value)" /> Name
-      <input type="radio" name="ctrl" value="ctrl"
-             onchange="switchCtrl(this.value)" /> Key
+      <input type="radio" name="ctrl" id="namedRadio" value="named"
+             onchange="switchCtrl(this.value)" checked="true" />
+      <label for="namedRadio">Name</label>
+      <input type="radio" name="ctrl" id="ctrlRadio" value="ctrl"
+             onchange="switchCtrl(this.value)" />
+      <label for="ctrlRadio">Key</label>
     </p>
     <p class="right">
       <a href="mailto:decklin@red-bean.com">Comments?</a>
