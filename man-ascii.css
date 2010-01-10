@@ -1,49 +1,56 @@
 body {
     font-family: sans-serif;
 }
-table.ascii {
+h1, p {
+    margin: 0.33em 0;
+}
+.content {
+    max-width: 62.5em;
+}
+
+.ascii {
     width: auto;
-    margin: 0 1em;
+    margin: 0 1em 0.33em 1em;
     padding: 0;
     border-collapse: collapse;
 }
-th, td {
+.ascii th, .ascii td {
     border: 1px solid #7587a3;
     width: 2.5em;
     height: 2.5em;
     margin: 0;
     padding: 0;
 }
-th {
+.ascii th {
     background: #d0d9e8;
     padding: 0.5em;
 }
-td {
+.ascii td {
     background: #f0f2f5;
     text-align: center;
 }
 
-.nonprint {
+.ascii .nonprint {
     vertical-align: top;
     background: #e7f5f5;
 }
-.print.alpha, .print.num {
+.ascii .print.alpha, .ascii .print.num {
     background: #f7fff5;
     /* border: 1px solid #adb8c7; */
 }
-.container {
+
+.ascii .container {
     width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
     position: relative;
 }
-
 .ascii p {
     padding: 0;
     margin: 0;
 }
-.ascii .named {
+.ascii .named, .ascii .ctrl {
     padding: 1em 0.4em;
 }
 .ascii .char {
@@ -60,13 +67,6 @@ td {
     color: #3ca06b;
     font-size: xx-small;
 }
-.ascii .ctrl {
-    position: absolute;
-    right: 0.25em;
-    top: 0.25em;
-    color: #3c8ca0;
-    font-size: xx-small;
-}
 .dec, .hex, .oct {
     position: absolute;
     right: 0.25em;
@@ -76,4 +76,16 @@ td {
 }
 .hex, .oct, .ctrl {
     display: none;
+}
+
+.options {
+    width: auto;
+    margin: 0 1em;
+}
+.options .left {
+    float: left;
+    clear: both;
+}
+.options .right {
+    float: right;
 }

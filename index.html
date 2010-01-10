@@ -8,9 +8,14 @@
     function toggleEsc(show) {
         $('.esc').toggle(show);
     }
-    function toggleCtrl(show) {
-        $('.ctrl').toggle(show);
+
+    var oldCtrl = 'named';
+    function switchCtrl(newCtrl) {
+        $('.' + oldCtrl).hide();
+        $('.' + newCtrl).show();
+        oldCtrl = newCtrl;
     }
+
     var oldBase = 'dec';
     function switchBase(newBase) {
         $('.' + oldBase).hide();
@@ -21,6 +26,7 @@
 </head>
 <body>
   <h1>man ascii</h1>
+<div class="content">
   <table class="ascii">
     <tr>
       <th></th>
@@ -1134,21 +1140,32 @@
       </td>
     </tr>
   </table>
-  <p>
-    Show numbers in:
-    <input type="radio" name="base" value="dec" checked="true"
-           onchange="switchBase(this.value)" /> Decimal
-    <input type="radio" name="base" value="hex"
-           onchange="switchBase(this.value)" /> Hex
-    <input type="radio" name="base" value="oct"
-           onchange="switchBase(this.value)" /> Octal
-    <input type="checkbox" checked="true"
-           onchange="toggleEsc(this.checked)" /> Show C escape characters
-    <input type="checkbox"
-           onchange="toggleCtrl(this.checked)" /> Show ^A-style equivalents
-  </p>
-  <p>
-    <a href="mailto:decklin@red-bean.com">Comments?</a>
-  </p>
+  <div class="options">
+    <p class="left">
+      Show numbers in:
+      <input type="radio" name="base" value="dec" checked="true"
+             onchange="switchBase(this.value)" /> Decimal
+      <input type="radio" name="base" value="hex"
+             onchange="switchBase(this.value)" /> Hex
+      <input type="radio" name="base" value="oct"
+             onchange="switchBase(this.value)" /> Octal
+    </p>
+    <p class="right">
+      <input type="checkbox" checked="true"
+             onchange="toggleEsc(this.checked)" /> Show C escapes
+    </p>
+    <br style="clear: both">
+    <p class="left">
+      Show control characters as:
+      <input type="radio" name="ctrl" value="named" checked="true"
+             onchange="switchCtrl(this.value)" /> Name
+      <input type="radio" name="ctrl" value="ctrl"
+             onchange="switchCtrl(this.value)" /> Key
+    </p>
+    <p class="right">
+      <a href="mailto:decklin@red-bean.com">Comments?</a>
+    </p>
+  </div>
+</div>
 </body>
 </html>
