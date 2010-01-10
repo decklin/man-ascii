@@ -47,7 +47,9 @@ td {
     padding: 1em 0.4em;
 }
 .ascii .char {
-    font-family: "Inconsolata", "Monaco", "Consolas", sans-serif;
+    font-family: "Inconsolata", "DejaVu Sans Mono",
+        "Bitstream Vera Sans Mono", "Monaco", "Panic Sans",
+        "Lucida Sans Typewriter", "Lucida Console", "Consolas", sans-serif;
     font-size: 133%;
     padding: 0.6em 0.3em;
 }
