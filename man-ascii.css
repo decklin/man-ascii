@@ -20,6 +20,7 @@ h1, p {
     margin: 0;
     width: 3.6em;
     padding: 0;
+    text-align: center;
 }
 .ascii th {
     background: #d0d9e8;
@@ -27,11 +28,9 @@ h1, p {
 }
 .ascii td {
     background: #f0f2f5;
-    text-align: center;
 }
 
 .ascii .nonprint {
-    vertical-align: top;
     background: #e7f5f5;
 }
 .ascii .print.alpha, .ascii .print.num {
@@ -56,14 +55,18 @@ h1, p {
     border-bottom: 1px dotted #c2c9d1 !important;
 }
 .ascii .named, .ascii .ctrl {
-    padding: 1em 0.4em;
+    width: 2em;
+    margin: 0 auto;
+    padding: 1.2em 0;
+}
+.ascii .named {
 }
 .ascii .char {
     font-family: "Inconsolata", "DejaVu Sans Mono",
         "Bitstream Vera Sans Mono", "Monaco", "Panic Sans",
         "Lucida Sans Typewriter", "Lucida Console", "Consolas", sans-serif;
     font-size: 133%;
-    padding: 0.6em 0.3em;
+    padding: 0.75em 0;
 }
 .ascii .esc {
     position: absolute;
